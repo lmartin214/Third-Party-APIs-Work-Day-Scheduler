@@ -4,29 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--BootStrap CSS link-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+
+    <!--Custom Fonts and Icons-->
     <link rel="stylesheet" 
     href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
     crossorigin="anonymous"
     />
+
+    <!--Google Fonts-->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+
+    <!--CSS file Link-->
     <link rel="stylesheet" href="./Assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
+    <!-- header w/ Jumbotron style-->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    <!--BootStrap container for time blocks-->
     <div class="container">
       <!-- Timeblocks added here -->
       <div id="hour-9" class="row time-block">
@@ -101,9 +111,11 @@
         </textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-
+      <!--JQuery link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!--Moment link for date display-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <!--JavaScript file link-->
     <script src="./Assets/script.js"></script>
   </body>
 </html>
