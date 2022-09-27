@@ -7,7 +7,29 @@ $(document).ready(function() {
         localStorage.setItem(time, task);
     });
 
-    // load any saved data from localStorage
+    //update hour to current with Moment
+    function updateHour () {
+        let presentHour = moment().hours(); 
+        $(".time-block").each(function () {
+            var hourBlock = parseInt($(this).attr('id').split('-')[1]);
+            //make a loop for time blocks with unique class tags found in CSS
+                if (hourBlock < presentHour) {
+                $(this).addClass('past');
+              } else if (hourBlock === presentHour) {
+                $(this).removeClass('past');
+                $(this).addClass('present');
+              } else {
+                $(this).removeClass('past');
+                $(this).removeClass('present');
+                $(this).addClass('future');
+              }
+        });
+    }
+
+    updateHour();
+    // interval to keep current block updated with the current time
+    let currentBlock = setInterval(updateHour, 5000 )
+    // load any saved tasks from localStorage
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));
